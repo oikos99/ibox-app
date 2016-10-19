@@ -62,7 +62,7 @@ public class WatchDirIntegrationTest {
 	
 	
 	
-//    @BeforeClass
+//Ignored for maven build    @BeforeClass
 	public static void setup() throws IOException {
 		// Create a test directory		
 		if(testWatchFile.exists() || testWatchFile.getParentFile().exists()) {	
@@ -74,14 +74,14 @@ public class WatchDirIntegrationTest {
 			throw new IOException("Failed to create directory " + testWatchFile.getParent());	
 	}
 	
-//    @AfterClass
+//Ignored for maven build    @AfterClass
 	public static void cleanUp() {
 		// Delete the test directory
 		deleteDir(testWatchFile);
 		deleteDir(testWatchFile.getParentFile());		
 	}
 	
-//    @Test
+//Ignored for maven build    @Test
 	public void testWatchDirIntegration() throws IOException, InterruptedException {
 
 		// Creates a WatchService and registers the test directory

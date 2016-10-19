@@ -73,19 +73,19 @@ public class GoogleDriveFileSyncManagerIntegrationTest {
 	java.io.File testUpdateFile = new java.io.File("src/test/resources/IntegrationUpdateTestFile.txt");
 	java.io.File testDeleteFile = new java.io.File("src/test/resources/IntegrationDeleteTestFile.txt");
 
-//    @BeforeClass
+//Ignored for maven build    @BeforeClass
 	public static void setup() throws IOException  {
 		initializeGoogleDriveServices();
 		testGoogleDriveFileSyncManager = new GoogleDriveFileSyncManager(googleDriveClient);
 	}
 
-//    @AfterClass
+//Ignored for maven build    @AfterClass
 	public void cleanUp() throws IOException {
 		testGoogleDriveFileSyncManager.deleteFile(testFile);
 		testGoogleDriveFileSyncManager.deleteFile(testUpdateFile);
 	}
 	
-//    @Test
+//Ignored for maven build    @Test
 	public void testAddFileIntegration() throws IOException {
     	// Add file to test the file adding functionality
     	testGoogleDriveFileSyncManager.addFile(testFile);
@@ -94,7 +94,7 @@ public class GoogleDriveFileSyncManagerIntegrationTest {
 		Assert.assertNotNull(newFileID);
 	}
     
-//    @Test
+//Ignored for maven build    @Test
     public void testUpdateFileIntegration() throws IOException  {
     	// Add and then update to test the updating functionality
     	testGoogleDriveFileSyncManager.addFile(testUpdateFile);
@@ -106,7 +106,7 @@ public class GoogleDriveFileSyncManagerIntegrationTest {
     	Assert.assertTrue(!dateUpdated.equals(dateAdded));
     }
     
-//    @Test
+//Ignored for maven build    @Test
     public void testDeleteFileIntegration() throws IOException  {
     	// Add and then delete to test the deleting functionality
     	testGoogleDriveFileSyncManager.addFile(testDeleteFile);
